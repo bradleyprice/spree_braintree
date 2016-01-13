@@ -1,6 +1,6 @@
-# solidus_braintree
+# spree_braintree
 
-`solidus_braintree` is a gem that adds [Braintree v.zero](https://www.braintreepayments.com/v.zero) support to the [solidus](http://solidus.io/) E-commerce platform.
+`spree_braintree` is a gem that adds [Braintree v.zero](https://www.braintreepayments.com/v.zero) support to the [spree](http://spree.io/) E-commerce platform.
 
 It provides support for credit card and Paypal payment methods via the `Spree::CreditCard`
 
@@ -8,22 +8,22 @@ It will add the braintree-drop-in form for payment methods in the payment form o
 
 ## Installation
 
-Add this line to your solidus application's Gemfile:
+Add this line to your spree application's Gemfile:
 
 ```ruby
-gem "solidus_braintree"
+gem "spree_braintree"
 ```
 
 And then execute:
 
     $ bundle
-    $ bundle exec rails g solidus_braintree:install
+    $ bundle exec rails g spree_braintree:install
 
 ## Usage
 
-This gem extends your solidus application by adding a `POST /api/payment_client_token` endpoint to you application to generate Braintree payment client token. This endpoint requires an authentication token in your request header.
+This gem extends your spree application by adding a `POST /api/payment_client_token` endpoint to you application to generate Braintree payment client token. This endpoint requires an authentication token in your request header.
 
-It creates a new `PaymentMethod` class called `Solidus::Gateway::BraintreeGateway`. You can configure this payment method in the admin and add your Braintree public/private keys and merchant id. The admin will render a Braintree dropin container when prompting you to create an order payment.
+It creates a new `PaymentMethod` class called `Spree::Gateway::BraintreeGateway`. You can configure this payment method in the admin and add your Braintree public/private keys and merchant id. The admin will render a Braintree dropin container when prompting you to create an order payment.
 
 It adds a json or text `data` field on `Spree::CreditCard` for storing additional information received from Braintree for addtional payment methods.
 
@@ -35,7 +35,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/solidusio/solidus_braintree.
+Bug reports and pull requests are welcome on GitHub at https://github.com/spreeio/spree_braintree.
 
 ## License
 

@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in solidus_braintree.gemspec
-gem "solidus", github: "solidusio/solidus", branch: "master"
+# Specify your gem's dependencies in spree_braintree.gemspec
+gem "spree", github: "spree/spree", branch: "master"
 gemspec

@@ -1,7 +1,7 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 ENV["RAILS_ENV"] = "test"
 
-require 'solidus_braintree'
+require 'spree_braintree'
 
 require_relative "dummy/config/environment"
 require 'rspec/rails'
@@ -19,11 +19,11 @@ require 'spree/testing_support/preferences'
 require 'spree/testing_support/controller_requests'
 require 'spree/testing_support/url_helpers'
 
-module SolidusGateway
+module SpreeGateway
   module Helpers
     module BraintreeGateway
       def create_braintree_payment_method
-        gateway = Solidus::Gateway::BraintreeGateway.create!(
+        gateway = Spree::Gateway::BraintreeGateway.create!(
           name: 'Braintree Gateway',
           active: true
         )
@@ -59,7 +59,7 @@ RSpec.configure do |config|
   config.include Spree::TestingSupport::Preferences
   config.include Spree::TestingSupport::ControllerRequests, type: :controller
   config.include Spree::TestingSupport::UrlHelpers, type: :controller
-  config.include SolidusGateway::Helpers::BraintreeGateway
+  config.include SpreeGateway::Helpers::BraintreeGateway
 
   config.before :suite do
     DatabaseCleaner.strategy = :transaction

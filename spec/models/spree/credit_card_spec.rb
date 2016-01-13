@@ -1,9 +1,9 @@
 require 'spec_helper'
 
 describe Spree::CreditCard, type: :model do
-  context "payment is of type Solidus::Gateway::BraintreeGateway" do
+  context "payment is of type Spree::Gateway::BraintreeGateway" do
     let(:payment_method) do
-      Solidus::Gateway::BraintreeGateway.create!(
+      Spree::Gateway::BraintreeGateway.create!(
         name: 'Braintree Gateway',
         active: true
       )

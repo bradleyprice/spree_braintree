@@ -1,1 +1,1 @@
-Spree::PermittedAttributes.singleton_class.prepend SolidusBraintree::PermittedAttributesConcern
+Spree::PermittedAttributes.singleton_class.prepend SpreeBraintree::PermittedAttributesConcern
