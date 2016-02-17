@@ -20,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   # spec.add_dependency "spree", ["~> 3.1.0.beta"]
-  spec.add_dependency "spree_core", "~> 3.1.0.beta"
+  spec.add_dependency "spree_core", "~> 3.0.5"
   spec.add_dependency "braintree", "~> 2.46"
 
   spec.add_development_dependency "bundler", "~> 1.10"
